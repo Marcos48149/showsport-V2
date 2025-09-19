@@ -6,7 +6,7 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "bunx tsc --noEmit && next lint",
-    "build": "next build --no-lint --no-type-check",
+    "build": "next build --no-lint",
     "format": "bunx biome format --write",
     "db:generate": "bunx prisma generate",
     "db:migrate": "bunx prisma migrate dev",
