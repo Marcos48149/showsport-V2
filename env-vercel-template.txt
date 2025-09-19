@@ -1,0 +1,73 @@
+# ===================================================
+# SHOWSPORT E-COMMERCE - VERCEL PRODUCTION CONFIG
+# ===================================================
+# Copy these variables to Vercel Dashboard > Settings > Environment Variables
+
+# Basic Configuration
+NODE_ENV=production
+BASE_URL=https://tu-proyecto.vercel.app
+NEXTAUTH_SECRET=REPLACE_WITH_RANDOM_SECRET_32_CHARS
+NEXTAUTH_URL=https://tu-proyecto.vercel.app
+
+# Database (Required for logging and analytics)
+DATABASE_URL=REPLACE_WITH_YOUR_POSTGRESQL_URL
+
+# ===================================================
+# PAYMENT GATEWAYS - PRODUCTION CREDENTIALS
+# ===================================================
+
+# Mercado Pago Production
+NEXT_PUBLIC_MERCADOPAGO_TEST_MODE=false
+MERCADOPAGO_ACCESS_TOKEN=REPLACE_WITH_MP_ACCESS_TOKEN
+NEXT_PUBLIC_MERCADOPAGO_PUBLIC_KEY=REPLACE_WITH_MP_PUBLIC_KEY
+MERCADOPAGO_WEBHOOK_SECRET=REPLACE_WITH_MP_WEBHOOK_SECRET
+
+# Go Cuotas Production
+NEXT_PUBLIC_GOCUOTAS_TEST_MODE=false
+GOCUOTAS_API_KEY=REPLACE_WITH_GC_API_KEY
+GOCUOTAS_MERCHANT_ID=REPLACE_WITH_GC_MERCHANT_ID
+GOCUOTAS_WEBHOOK_SECRET=REPLACE_WITH_GC_WEBHOOK_SECRET
+
+# MODO Production
+NEXT_PUBLIC_MODO_TEST_MODE=false
+MODO_API_KEY=REPLACE_WITH_MODO_API_KEY
+MODO_MERCHANT_ID=SHOWSPORT
+MODO_WEBHOOK_SECRET=REPLACE_WITH_MODO_WEBHOOK_SECRET
+
+# ===================================================
+# SECURITY & MONITORING
+# ===================================================
+
+# Global webhook security
+PAYMENT_WEBHOOK_SECRET=REPLACE_WITH_GLOBAL_WEBHOOK_SECRET
+
+# Logging configuration
+LOG_LEVEL=info
+ENABLE_PAYMENT_LOGGING=true
+
+# ===================================================
+# EMAIL CONFIGURATION (Optional)
+# ===================================================
+
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=REPLACE_WITH_YOUR_EMAIL
+SMTP_PASSWORD=REPLACE_WITH_YOUR_EMAIL_PASSWORD
+
+# ===================================================
+# VTEX INTEGRATION (Optional)
+# ===================================================
+
+VTEX_ACCOUNT_NAME=REPLACE_WITH_VTEX_ACCOUNT
+VTEX_API_KEY=REPLACE_WITH_VTEX_API_KEY
+VTEX_API_TOKEN=REPLACE_WITH_VTEX_API_TOKEN
+VTEX_ENVIRONMENT=stable
+
+# ===================================================
+# WEBHOOK URLS FOR REFERENCE
+# ===================================================
+# Configure these URLs in your payment provider dashboards:
+#
+# Mercado Pago: https://tu-proyecto.vercel.app/api/webhooks/mercadopago
+# Go Cuotas:    https://tu-proyecto.vercel.app/api/webhooks/gocuotas
+# MODO:         https://tu-proyecto.vercel.app/api/webhooks/modo
