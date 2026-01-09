@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   allowedDevOrigins: ["*.preview.same-app.com"],
+
   images: {
     unoptimized: true,
     domains: [
@@ -9,9 +10,6 @@ const nextConfig = {
       "ext.same-assets.com",
       "ugc.same-assets.com",
     ],
-    typescript: {
-    ignoreBuildErrors: true,
-  },
     remotePatterns: [
       {
         protocol: "https",
@@ -34,6 +32,10 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
+  },
+
+  typescript: {
+    ignoreBuildErrors: true,
   },
 };
 
