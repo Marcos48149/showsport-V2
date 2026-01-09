@@ -2,9 +2,6 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
-<Link href="/">Home</Link>
-
-
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -19,20 +16,20 @@ export default function Header() {
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-8 py-3">
         {/* Logo */}
-        <link href="/" className="text-xl font-bold text-orange-600">
+        <Link href="/" className="text-xl font-bold text-orange-600">
           SHOWSPORT
-        </link>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8">
           {navLinks.map(link => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               className="text-gray-700 hover:text-orange-500 transition-colors font-medium"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -54,18 +51,17 @@ export default function Header() {
       >
         <div className="flex flex-col gap-4 px-4">
           {navLinks.map(link => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               className="text-gray-700 hover:text-orange-500 transition-colors font-medium py-2"
               onClick={() => setMenuOpen(false)}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
       </nav>
     </header>
   );
 }
-// ...existing code...
